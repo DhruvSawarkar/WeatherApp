@@ -1,0 +1,7 @@
+## Copy this file to "local.properties" and fill in your values.
+## local.properties is gitignored — never commit real keys.
+
+sdk.dir=/path/to/your/Android/sdk
+
+# Get a free key at https://openweathermap.org/api (Current Weather + 5 Day Forecast + Geocoding are all free tier)
+WEATHER_API_KEY=your_openweathermap_api_key_here

@@ -1,0 +1,3 @@
+-keep class com.example.weatherapp.data.remote.dto.** { *; }
+-dontwarn okhttp3.**
+-dontwarn retrofit2.**
