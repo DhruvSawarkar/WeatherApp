@@ -4,6 +4,12 @@ A native Android weather app built with **Kotlin** and **Jetpack Compose**, show
 your current GPS location with automatic background refresh as you move, plus city search,
 hourly/daily forecasts, and Celsius/Fahrenheit switching.
 
+<img src="C:\Users\Dhruv\Downloads\permission.jpeg" width="230" alt="Permission Screen" />
+<img src="C:\Users\Dhruv\Downloads\Homescreen1.jpeg" width="230" alt="Home screen — current weather" />
+<img src="C:\Users\Dhruv\Downloads\Homescreen2.jpeg" width="230" alt="Home screen — current weather" />
+<img src="C:\Users\Dhruv\Downloads\Search.jpeg" width="230" alt="Search Screen" />
+<img src="C:\Users\Dhruv\Downloads\After.jpeg" width="230" alt="Search Result Screen" />
+
 ## Tech stack
 
 | Layer            | Choice                                                                 |
@@ -11,7 +17,6 @@ hourly/daily forecasts, and Celsius/Fahrenheit switching.
 | UI                | Jetpack Compose + Material 3 (dynamic color, dark theme support)       |
 | Architecture      | MVVM + Clean Architecture (`data` / `domain` / `presentation`)         |
 | DI                | Hilt                                                                     |
-| Async             | Kotlin Coroutines + Flow (`StateFlow`, `callbackFlow`)                 |
 | Networking        | Retrofit2 + OkHttp + Gson                                               |
 | Location          | Google Play Services `FusedLocationProviderClient` (live updates)      |
 | Persistence       | Jetpack DataStore (Preferences) for saved unit setting                 |
@@ -78,11 +83,9 @@ Minimum SDK 26 (Android 8.0), target/compile SDK 34.
 
 ## Notes & possible extensions
 
-- The free OpenWeatherMap tier doesn't include the "One Call" API, so daily forecasts are derived
-  by aggregating the 3-hour/5-day forecast into per-day min/max — accurate enough for a 5-day
-  outlook without a paid plan. Swap in One Call 3.0 in `WeatherApiService`/`WeatherMapper` for
-  hourly-for-48h and 8-day daily data if you have that plan.
-- Widget/notification-based "always visible" weather, WorkManager-based periodic background sync
-  (for when the app isn't open), and a Room-backed multi-city cache are natural next additions —
-  the Clean Architecture split (repository interface + DTOs isolated in `data/`) makes each of
-  those a contained change.
+-The free OpenWeatherMap tier doesn't include the "One Call" API, so daily forecasts are derived 
+by aggregating the 3-hour/5-day forecast into per-day min/max. Swap in One Call 3.0 for hourly-for-48h 
+and 8-day daily data with a paid plan.
+
+-WorkManager-based periodic background sync (for when the app isn't open), a home-screen widget, and a Room-backed
+multi-city cache are natural next additions.
