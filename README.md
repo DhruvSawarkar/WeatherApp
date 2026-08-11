@@ -4,11 +4,11 @@ A native Android weather app built with **Kotlin** and **Jetpack Compose**, show
 your current GPS location with automatic background refresh as you move, plus city search,
 hourly/daily forecasts, and Celsius/Fahrenheit switching.
 
-<img src="screenshots/permission.jpeg" width="230" alt="Permission Screen" />
-<img src="screenshots/Homescreen1.jpeg" width="230" alt="Home screen — current weather" />
-<img src="screenshots/Homescreen2.jpeg" width="230" alt="Home screen — current weather" />
-<img src="screenshots/Search.jpeg" width="230" alt="Search Screen" />
-<img src="screenshots/After.jpeg" width="230" alt="Search Result Screen" />
+<img src="Screenshots/permission.jpeg" width="230" alt="Permission Screen" />
+<img src="Screenshots/Homescreen1.jpeg" width="230" alt="Home screen — current weather" />
+<img src="Screenshots/Homescreen2.jpeg" width="230" alt="Home screen — current weather" />
+<img src="Screenshots/Search.jpeg" width="230" alt="Search Screen" />
+<img src="Screenshots/After.jpeg" width="230" alt="Search Result Screen" />
 
 ## Tech stack
 
